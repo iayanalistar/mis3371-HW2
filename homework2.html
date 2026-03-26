@@ -52,48 +52,57 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
             <tr>
         <td>First Name:</td>
         <td>
-            <input type="text" name="firstname" id="fname" maxlength="30" required>
-    
+            <input type="text" name="firstname" id="fname" maxlength="30" required
+            title="Enter your first name using letters, apostrophes, or dashes only.">
+            
             Middle Initial:
-            <input type="text" name="middleinitial" id="mi" maxlength="1">
-    
+            <input type="text" name="mi" id="mi"
+            title="Enter your middle initial (one letter only, optional).">
+          
             Last Name:
-            <input type="text" name="lastname" id="lname" maxlength="30" required>
+            <input type="text" name="lname" id="lname" required
+            title="Enter your last name (1–30 characters, letters, numbers 2–5, apostrophes, or dashes allowed).">
+            
         </td>     
      </tr>
       <!--DOB-->      
     <tr>
         <td>Date of Birth:</td>
             <td>
-            <input type="date" name="dob" required>
+            <input type="date" name="dob" id="dob" required
+            title="Enter your date of birth. It cannot be in the future or more than 120 years ago.">
         </td>
     </tr>
 <!--SSN-->
     <tr>
         <td>Social Security:</td>
         <td>
-            <input type="password" name="ssn" minlength="9" maxlength="11" required>
+            <input type="password" name="ssn" id="ssn" required
+            title="Enter your ID number. This field is hidden for security.">
         </td>
 </tr>
 <!--Address-->
 <tr>
         <td>Street Address:</td>
         <td>
-            <input type="text" name="street" id="address1" maxlength="50" required>
+            <input type="text" name="street" id="address1" required
+            title="Enter your street address (2–30 characters).">
         </td>
     </tr>
     <!--City-->
     <tr>
         <td>City:</td>
         <td>
-            <input type="text" name="city" id="city" maxlength="30" required>
+            <input type="text" name="city" id="city" required
+            title="Enter your city (2–30 characters).">
         </td>
     </tr>
     <!--State-->
     <tr>
     <td>State:</td>
     <td>
-        <select name="state" id="state" required>
+        <select name="state" id="state" required
+        title="Select your state from the list.">
             <option value="">Select State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -154,21 +163,24 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
         <tr>
             <td>ZIP Code:</td>
             <td>
-                <input type="text" name="zipcode" id="zip" maxlength="10" placeholder="12345" required>
+                <input type="text" name="zip" id="zip" required
+                title="Enter your ZIP code (5 digits or ZIP+4 format like 77002-1234).">
             </td>
         </tr>
        <!--Phone Number--> 
         <tr>
             <td>Phone Number:</td>
                 <td>
-                    <input type="tel" name="phone" placeholder="713-123-1234" id="phone" maxlength="13" required>
+                    <input type="tel" name="phone" id="phone" required
+                    title="Enter your phone number in the format 123-456-7890.">
                 </td>
         </tr>
     <!--Email Adress-->
     <tr>
         <td>Email Address:</td>
         <td>
-            <input type="email" name="email" id="email" maxlength="50" required>
+            <input type="email" name="email" id="email" required
+            title="Enter a valid email address in the format name@domain.com.">
         </td>
     </tr>  
     <!--Gender-->            
@@ -187,6 +199,17 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
                 <input type="radio" name="vaccinated" value="yes" required> Yes
                 <input type="radio" name="vaccinated" value="no"> No
             </td>
+    </tr>
+            
+     <tr>
+    <td>Desired Salary:</td>
+    <td>
+        <input type="range" id="salary" name="salary" min="20000" max="200000" step="1000"
+               oninput="document.getElementById('salaryOutput').innerText = '$' + this.value"
+               title="Select your desired salary from $20,000 to $200,000.">
+
+        <span id="salaryOutput">$20000</span>
+    </td>
     </tr>
             
     <tr>
@@ -227,23 +250,34 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
      <tr>
         <td>Desired User ID:</td>
             <td>
-                <input type="text" name="userid" id="userid" maxlength="20" required>
+                <input type="text" name="userid" id="userid" required
+                title="Enter a user ID (5–30 characters, must start with a letter, no spaces, only letters, numbers, underscores, or dashes).">
             </td>
     </tr>
     <!--User Password-->
     <tr>
         <td>Password:</td>
             <td>
-                <input type="password" name="password" required>
+                <input type="password" name="password" id="password" required
+                title="Password must be 8–30 characters and include uppercase, lowercase, a number, and a special character.">
             </td>
     </tr>
     
     <tr>
         <td>Re-enter Password:</td>
             <td>
-                <input type="password" name="repassword" maxlength="30" required>
+                <input type="password" name="confirmPassword" id="confirmPassword" required
+                title="Re-enter your password. It must match the password above.">
             </td>
     </tr> 
+            
+    <tr>
+        <td>Comments / Symptoms:</td>
+            <td>
+                <textarea id="comments" name="comments" rows="4" cols="40"
+                title="Enter any additional comments or symptoms (optional)."></textarea>
+        </td>
+    </tr>  
             
     <tr>
         <td colspan="2" align="center">
