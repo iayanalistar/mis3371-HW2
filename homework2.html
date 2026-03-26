@@ -14,7 +14,8 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
     <head>
         <meta charset="utf-8">
         <title>ZinoCare Group - Patient Registration</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="homework2.css">
+        <script src="homework2.js" defer></script>
     </head>
     <body>
         <!--Header-->
@@ -43,7 +44,7 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
       
         </div>
     
-            <form action="thankyou.html">
+            <form id="registrationForm" action="#" method="post">
     
         <h2>Patient Registration Form</h2>
     <!--Patient Name-->
@@ -51,13 +52,13 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
             <tr>
         <td>First Name:</td>
         <td>
-            <input type="text" name="firstname" maxlength="30" required>
+            <input type="text" name="firstname" id="fname" maxlength="30" required>
     
             Middle Initial:
-            <input type="text" name="middleinitial" maxlength="1">
+            <input type="text" name="middleinitial" id="mi" maxlength="1">
     
             Last Name:
-            <input type="text" name="lastname" maxlength="30" required>
+            <input type="text" name="lastname" id="lname" maxlength="30" required>
         </td>     
      </tr>
       <!--DOB-->      
@@ -77,21 +78,21 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
     <tr>
         <td>Street Address:</td>
         <td>
-            <input type="text" name="street" maxlength="50" required>
+            <input type="text" name="street" id="address1" maxlength="50" required>
         </td>
     </tr>
     <!--City-->
     <tr>
         <td>City:</td>
         <td>
-            <input type="text" name="city" maxlength="30" required>
+            <input type="text" name="city" id="city" maxlength="30" required>
         </td>
     </tr>
     <!--State-->
     <tr>
     <td>State:</td>
     <td>
-        <select name="state" required>
+        <select name="state" id="state" required>
             <option value="">Select State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -152,21 +153,21 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
         <tr>
             <td>ZIP Code:</td>
             <td>
-                <input type="text" name="zipcode" maxlength="10" placeholder="12345" required>
+                <input type="text" name="zipcode" id="zip" maxlength="10" placeholder="12345" required>
             </td>
         </tr>
        <!--Phone Number--> 
         <tr>
             <td>Phone Number:</td>
                 <td>
-                    <input type="tel" name="phone" placeholder="713-123-1234" maxlength="13" required>
+                    <input type="tel" name="phone" placeholder="713-123-1234" id="phone" maxlength="13" required>
                 </td>
         </tr>
     <!--Email Adress-->
     <tr>
         <td>Email Address:</td>
         <td>
-            <input type="email" name="email" maxlength="50" required>
+            <input type="email" name="email" id="email" maxlength="50" required>
         </td>
     </tr>  
     <!--Gender-->            
@@ -246,6 +247,7 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
     <tr>
         <td colspan="2" align="center">
             <input type="reset" value="CLEAR AND START OVER">
+            <input type="button" value="Review" id="reviewBtn">
             <input type="submit" value="Submit">
         </td>
     </tr>
