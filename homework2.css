@@ -59,6 +59,18 @@ a {
     color: #003366;
 }
 
+#reviewSection {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#reviewSection h2,
+#reviewSection h3 {
+    color: #003366;
+}
+
 a:visited {
     color: purple;
 }
