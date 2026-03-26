@@ -1,3 +1,5 @@
+alert("JS loaded");
+
 document.getElementById("reviewBtn").addEventListener("click", function () {
 
     let fname = document.getElementById("fname").value;
