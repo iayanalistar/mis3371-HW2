@@ -53,14 +53,17 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
         <td>First Name:</td>
         <td>
             <input type="text" name="firstname" id="fname" maxlength="30" required
+            pattern="[A-Za-z'-]{1,30}"
             title="Enter your first name using letters, apostrophes, or dashes only.">
             
             Middle Initial:
             <input type="text" name="mi" id="mi"
+            pattern="[A-Za-z]?"
             title="Enter your middle initial (one letter only, optional).">
           
             Last Name:
             <input type="text" name="lname" id="lname" required
+            pattern="[A-Za-z0-9'-]{1,30}"
             title="Enter your last name (1–30 characters, letters, numbers 2–5, apostrophes, or dashes allowed).">
             
         </td>     
@@ -164,6 +167,7 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
             <td>ZIP Code:</td>
             <td>
                 <input type="text" name="zip" id="zip" required
+                pattern="[0-9]{5}(-[0-9]{4})?"
                 title="Enter your ZIP code (5 digits or ZIP+4 format like 77002-1234).">
             </td>
         </tr>
@@ -172,6 +176,7 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
             <td>Phone Number:</td>
                 <td>
                     <input type="tel" name="phone" id="phone" required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     title="Enter your phone number in the format 123-456-7890.">
                 </td>
         </tr>
@@ -251,6 +256,7 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
         <td>Desired User ID:</td>
             <td>
                 <input type="text" name="userid" id="userid" required
+                pattern="[A-Za-z][A-Za-z0-9_-]{4,29}"
                 title="Enter a user ID (5–30 characters, must start with a letter, no spaces, only letters, numbers, underscores, or dashes).">
             </td>
     </tr>
@@ -259,6 +265,7 @@ Description: Website for patients of ZinoCare Group to register allowing to obta
         <td>Password:</td>
             <td>
                 <input type="password" name="password" id="password" required
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%^&*()\-_=+\\/<>.,`~])[A-Za-z0-9!@#%^&*()\-_=+\\/<>.,`~]{8,30}"
                 title="Password must be 8–30 characters and include uppercase, lowercase, a number, and a special character.">
             </td>
     </tr>
