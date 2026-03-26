@@ -1,5 +1,3 @@
-alert("JS is connected");
-
 document.addEventListener("DOMContentLoaded", function () {
     const reviewBtn = document.getElementById("reviewBtn");
 
