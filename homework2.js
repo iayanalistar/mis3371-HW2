@@ -1,5 +1,3 @@
-alert("JS loaded");
-
 document.addEventListener("DOMContentLoaded", function () {
     const reviewBtn = document.getElementById("reviewBtn");
 
@@ -8,15 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let fname = document.getElementById("fname")?.value || "";
             let mi = document.getElementById("mi")?.value || "";
             let lname = document.getElementById("lname")?.value || "";
-
             let email = document.getElementById("email")?.value || "";
             let phone = document.getElementById("phone")?.value || "";
-
             let address1 = document.getElementById("address1")?.value || "";
             let city = document.getElementById("city")?.value || "";
             let state = document.getElementById("state")?.value || "";
             let zip = document.getElementById("zip")?.value || "";
-
             let userid = document.getElementById("userid")?.value || "";
 
             let output = `
